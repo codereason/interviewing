@@ -20,6 +20,6 @@ class Solution(object):
         """
         count = 0
         for i in bin(x^y):
-            print i
+            print(i)
             if i == '1':count+=1
         return count
