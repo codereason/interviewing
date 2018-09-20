@@ -1,3 +1,4 @@
+# coding
 class SortingSolution:
     """
     @param: A: an integer array
@@ -33,22 +34,46 @@ class SortingSolution:
 
         return A
 
-    def QuickSort(self, A, begin, end):
-        if len(A) > 1:
-            split = self.partition2(A)
-            self.QuickSort(A, begin, split)
-            self.QuickSort(A, split + 1, end)
 
-    def partition(self, arr, pivot):
-        pass
+    def QuickSort_2(self, arr):
+        if len(arr) <= 1 :
+            return arr
 
-    def partition2(self, arr):
-        if len(arr) > 1:
+        if len(arr)>1:
             pivot = arr[0]
-            less, more, cur = 0, len(arr) - 1, 0
-            while (cur <= more):
+            less = []
+            more = []
+            equal = []
+            for i in range(0,len(arr)):
+                if arr[i]<pivot:
+                    less.append(arr[i])
+                elif arr[i]==pivot:
+                    equal.append(arr[i])
+                else:
+                    more.append(arr[i])
+            less = self.QuickSort_2(less)
+            more = self.QuickSort_2(more)
+            return self.QuickSort_2(less) + equal+ self.QuickSort_2(more)
+
+
+    def QuickSort_1(self,arr,low,high):
+
+        if(low < high):
+            less,more = self.partition2(arr,low,high)
+            # self.QuickSort_1(arr[:less])
+            #
+            # self.QuickSort_1(arr[more+1:])
+            self.QuickSort_1(arr,low,less-1)
+            self.QuickSort_1(arr,more,high)
+
+    def partition2(self, arr,low,high):
+        if len(arr) > 1:
+            pivot = arr[high]
+            print(pivot)
+            less, more, cur = low-1, high+1,low
+            while (cur < more):
                 if arr[cur] < pivot:
-                    arr[less], arr[cur] = arr[cur], arr[less]
+                    arr[less+1], arr[cur] = arr[cur], arr[less+1]
                     cur += 1
                     less += 1
                     continue
@@ -58,10 +83,12 @@ class SortingSolution:
 
                 else:
 
-                    arr[more], arr[cur] = arr[cur], arr[more]
+                    arr[more-1], arr[cur] = arr[cur], arr[more-1]
                     more -= 1
+        return [less+1,more]
 
-        return [less, more]  # 返回==pivot的左右边界
+
+         # 返回==pivot的左右边界
         # if arr==[]:
         #     return
         # i=0
@@ -84,6 +111,7 @@ class SortingSolution:
     def HeapSort(self, A):
         pass
 
+    #
     def MergeSort(self, A):
         if len(A) > 1:
 
@@ -120,10 +148,13 @@ class SortingSolution:
         A.sort()
 
 
-
-
 if __name__ == '__main__':
-    seq = [2, 0, 1, 49, 20, -8]
+    # seq = [2, 0, 2,1, 49, 2,5,6,4,20, -8,7,1,2,3,4,0,-77,2]
+    seq = [3,2,1,4,5]
+
     s = SortingSolution()
-    print(s.partition2(seq))
+
+    # print(s.QuickSort_2(seq,0,len(seq)-1))
+    # print(s.partition2(seq, 0, len(seq) - 1))
+    print(s.QuickSort_1(seq,0,len(seq)-1))
     print(seq)
