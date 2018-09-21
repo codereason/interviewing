@@ -34,46 +34,44 @@ class SortingSolution:
 
         return A
 
-
     def QuickSort_2(self, arr):
-        if len(arr) <= 1 :
+        if len(arr) <= 1:
             return arr
 
-        if len(arr)>1:
+        if len(arr) > 1:
             pivot = arr[0]
             less = []
             more = []
             equal = []
-            for i in range(0,len(arr)):
-                if arr[i]<pivot:
+            for i in range(0, len(arr)):
+                if arr[i] < pivot:
                     less.append(arr[i])
-                elif arr[i]==pivot:
+                elif arr[i] == pivot:
                     equal.append(arr[i])
                 else:
                     more.append(arr[i])
             less = self.QuickSort_2(less)
             more = self.QuickSort_2(more)
-            return self.QuickSort_2(less) + equal+ self.QuickSort_2(more)
+            return self.QuickSort_2(less) + equal + self.QuickSort_2(more)
 
+    def QuickSort_1(self, arr, low, high):
 
-    def QuickSort_1(self,arr,low,high):
-
-        if(low < high):
-            less,more = self.partition2(arr,low,high)
+        if (low < high):
+            less, more = self.partition2(arr, low, high)
             # self.QuickSort_1(arr[:less])
             #
             # self.QuickSort_1(arr[more+1:])
-            self.QuickSort_1(arr,low,less-1)
-            self.QuickSort_1(arr,more,high)
+            self.QuickSort_1(arr, low, less - 1)
+            self.QuickSort_1(arr, more, high)
 
-    def partition2(self, arr,low,high):
+    def partition2(self, arr, low, high):
         if len(arr) > 1:
             pivot = arr[high]
             print(pivot)
-            less, more, cur = low-1, high+1,low
+            less, more, cur = low - 1, high + 1, low
             while (cur < more):
                 if arr[cur] < pivot:
-                    arr[less+1], arr[cur] = arr[cur], arr[less+1]
+                    arr[less + 1], arr[cur] = arr[cur], arr[less + 1]
                     cur += 1
                     less += 1
                     continue
@@ -83,12 +81,12 @@ class SortingSolution:
 
                 else:
 
-                    arr[more-1], arr[cur] = arr[cur], arr[more-1]
+                    arr[more - 1], arr[cur] = arr[cur], arr[more - 1]
                     more -= 1
-        return [less+1,more]
+        return [less + 1, more]
 
 
-         # 返回==pivot的左右边界
+        # 返回==pivot的左右边界
         # if arr==[]:
         #     return
         # i=0
@@ -108,10 +106,42 @@ class SortingSolution:
     def ShellSort(self, A):
         pass
 
-    def HeapSort(self, A):
-        pass
-
     #
+    # def HeapSort(self, A):
+    #     for i in range(len(A)//2,-1,-1):
+    #         HeapAdjust(A,i,len(A))
+    #
+    #     for i in range(len(A),-1,-1):
+
+
+    def heapify(self, arr, n, index):
+        '''
+        
+heap sort : https://www.programiz.com/dsa/heap-sort
+        将数据结构变成一个堆 最高点是最大值 但不一定是maxheap
+        :param arr: 
+        :return: 
+        '''
+        largest_index = index
+        left, right = index * 2 + 1, index * 2 + 2
+        if (left < n and arr[left] > arr[largest_index]):
+            largest_index = left
+
+        if (right < n and arr[right] > arr[largest_index]):
+            largest_index = right
+
+        if largest_index != index:
+            arr[index], arr[largest_index] = arr[largest_index], arr[index]
+            self.heapify(arr, n, largest_index)
+
+    def heapSort(self, arr, ):
+        for i in range(len(arr) // 2 - 1, -1, -1):
+            self.heapify(arr, len(arr), i)
+
+        for i in range(len(arr) - 1, -1, -1):
+            arr[0], arr[i] = arr[i], arr[0]
+            self.heapify(arr, i, 0)
+
     def MergeSort(self, A):
         if len(A) > 1:
 
@@ -149,12 +179,12 @@ class SortingSolution:
 
 
 if __name__ == '__main__':
-    # seq = [2, 0, 2,1, 49, 2,5,6,4,20, -8,7,1,2,3,4,0,-77,2]
-    seq = [3,2,1,4,5]
+    seq = [2, 0, 2, 1, 49, 2, 5, 6, 4, 20, -8, 7, 1, 2, 3, 4, 0, -77, 2]
+    # seq = [3, 2, 1, 4, 5]
 
     s = SortingSolution()
 
     # print(s.QuickSort_2(seq,0,len(seq)-1))
     # print(s.partition2(seq, 0, len(seq) - 1))
-    print(s.QuickSort_1(seq,0,len(seq)-1))
+    print(s.heapSort(seq))
     print(seq)
