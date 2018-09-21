@@ -118,7 +118,7 @@ class SortingSolution:
         '''
         
 heap sort : https://www.programiz.com/dsa/heap-sort
-        将数据结构变成一个堆 最高点是最大值 但不一定是maxheap
+        将数据结构变成一个堆 保证index位置是最大值是最大值 但不一定是maxheap
         :param arr: 
         :return: 
         '''
@@ -135,10 +135,18 @@ heap sort : https://www.programiz.com/dsa/heap-sort
             self.heapify(arr, n, largest_index)
 
     def heapSort(self, arr, ):
-        for i in range(len(arr) // 2 - 1, -1, -1):
+        '''
+        1.让数组整体形成大根堆
+        2.把最后一个位置和堆顶交换
+        3.让堆的大小减1，并将堆heapify，index=0，重新调整成大根堆
+        :param arr: 
+        :return: 
+        '''
+        for i in range(len(arr) // 2 - 1, -1, -1):#len(arr) // 2 - 1 最后一个非叶子节点
+            # 构造大根堆
             self.heapify(arr, len(arr), i)
-
-        for i in range(len(arr) - 1, -1, -1):
+        print('大根堆是：' ,arr)
+        for i in range(len(arr) - 1, -1, -1):#堆排，将大根堆转换成有序数组，堆中最大值和arr[i]交换
             arr[0], arr[i] = arr[i], arr[0]
             self.heapify(arr, i, 0)
 
