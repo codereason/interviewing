@@ -142,13 +142,15 @@ heap sort : https://www.programiz.com/dsa/heap-sort
         :param arr: 
         :return: 
         '''
-        for i in range(len(arr) // 2 - 1, -1, -1):#len(arr) // 2 - 1 最后一个非叶子节点
+        for i in range(len(arr) // 2 - 1, -1, -1):#len(arr) // 2 - 1 是最后一个非叶子节点的索引
             # 构造大根堆
             self.heapify(arr, len(arr), i)
+            print("heapifying ", arr," i is ", i)
         print('大根堆是：' ,arr)
         for i in range(len(arr) - 1, -1, -1):#堆排，将大根堆转换成有序数组，堆中最大值和arr[i]交换
             arr[0], arr[i] = arr[i], arr[0]
             self.heapify(arr, i, 0)
+
 
     def MergeSort(self, A):
         if len(A) > 1:
