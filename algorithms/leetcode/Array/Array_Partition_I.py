@@ -13,6 +13,6 @@ class Solution(object):
         """
         nums.sort()
         sum1 = 0
-        for i in xrange(0, len(nums), 2):
+        for i in range(0, len(nums), 2):
             sum1 = sum1 + nums[i]
         return sum1
