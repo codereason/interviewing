@@ -20,7 +20,12 @@ Note:
 You may assume all elements in the array are non-negative integers and fit in the 32-bit signed integer range.
 Try to solve it in linear time/space.
     '''
+
+'''
+in linear time/space.
+'''
 class Solution:
+
 
     def maximumGap(self, nums):
         """
@@ -60,3 +65,20 @@ class Solution:
     def getBucket(self, num, length, min, max):  # 确定当前数 属于几号桶
 
         return ((num - min) * (length)) / (max - min)
+'''
+in O(nlogn).
+'''
+class Solution2:
+    def maximumGap(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        max_value = 0
+        for i in range(len(nums)-1):
+            diff = nums[i+1] - nums[i]
+            if max_value < diff:
+                max_value = diff
+
+        return max_value
