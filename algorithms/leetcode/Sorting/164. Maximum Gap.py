@@ -71,7 +71,7 @@ in O(nlogn).
 class Solution2:
     def maximumGap(self, nums):
         """
-        :type nums: List[int]
+        :type nums: List[int]sss
         :rtype: int
         """
         nums.sort()
