@@ -30,7 +30,7 @@ class Solution:
             while(x_j != y_j + 1):
                 print(mat[x_j][x_i])
                 x_j += 1
-                x
+                # x
         else:
             for _ in range(x_i, -1, y_i - 1):
                 print(mat[x_i - _][_])
