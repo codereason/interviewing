@@ -5,7 +5,7 @@
 - 剑指offer
 - lintcode
 - 牛客网
-- 一些博客和教程 为避免广告不说了
+- 一些博客
 
 有人会推荐Cracking the coding interview，这本书有中文版名字叫《程序员面试指南》，我买了但是没看
 
