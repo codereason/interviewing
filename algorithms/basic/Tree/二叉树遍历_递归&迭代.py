@@ -99,9 +99,27 @@ class IterativeSolution():
 
             return list
 
-    def postorderTraversal(self, root):
+    def postorderTraversal(self, root): #左右中
+        '''
+        后续是左右中，可以逆转为中右左，
+        而前序是中左右，只要吧前序的稍改一下再逆序打印即可
+        :param root: 
+        :return: 
+        '''
         stack = []
         list = []
         if root == None:
             return []
         else:
+
+            stack.append(root)
+            while (stack):
+                root = stack.pop()
+                list.append(root.val)
+                print(root.val)
+                if root.left:
+                    stack.append(root.left)
+                if root.right:
+                    stack.append(root.right)
+
+            return list[::-1]
