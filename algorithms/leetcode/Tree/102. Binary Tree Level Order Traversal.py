@@ -23,7 +23,8 @@ return its level order traversal as:
 #         self.right = None
 
 '''
-应该使用队列的方法最好不过
+应该使用队列的方法最好不过，
+还有其他思路暂时不想了
 '''
 import collections
 

@@ -46,10 +46,7 @@ class Solution(object):
         :rtype: bool
         """
         if  p is None and q is None:return True
-        if (p is None) and q:
-            return False
-        if (q is None) and p:
-            return False
-        if p.val != q.val:return False
-        else:
+
+        if p and q and p.val == q.val:
             return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        else: return False

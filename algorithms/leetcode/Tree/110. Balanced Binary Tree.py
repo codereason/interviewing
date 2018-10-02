@@ -37,23 +37,27 @@ Return false.
 但是可以用
 
 '''
+
+
 class Solution:
     def isBalanced(self, root):
         """
         :type root: TreeNode
         :rtype: bool
         """
-        if root is None:return True
+        if root is None: return True
         if self.isBalanced(root.left) and self.isBalanced(root.right) and \
-            abs(self._getSubTreeLength(root.left) - self._getSubTreeLength(root.right)) <= 1:
+                        abs(self._getSubTreeLength(
+                            root.left) - self._getSubTreeLength(
+                            root.right)) <= 1:
             return True
         # print(abs(self._getSubTreeLength(root.left) - self._getSubTreeLength(root.right)))
         return False
 
-    def _getSubTreeLength(self,root):
+    def _getSubTreeLength(self, root):
         if root is None: return 0
-        return 1 + max(self._getSubTreeLength(root.left),self._getSubTreeLength(root.right))
-
+        return 1 + max(self._getSubTreeLength(root.left),
+                       self._getSubTreeLength(root.right))
 
 
 class Solution2:
@@ -62,14 +66,16 @@ class Solution2:
         :type root: TreeNode
         :rtype: bool
         """
-        if root is None:return True
+        if root is None: return True
 
-        if abs(self._getSubTreeLength(root.left) - self._getSubTreeLength(root.right)) <= 1:
+        if abs(self._getSubTreeLength(root.left) - self._getSubTreeLength(
+                root.right)) <= 1:
             return self.isBalanced(root.left) and self.isBalanced(root.right)
         # print(abs(self._getSubTreeLength(root.left) - self._getSubTreeLength(root.right)))
-        else:return False
+        else:
+            return False
 
-    def _getSubTreeLength(self,root):
+    def _getSubTreeLength(self, root):
         if root is None: return 0
-        return 1+ max(self._getSubTreeLength(root.left),self._getSubTreeLength(root.right))
-
+        return 1 + max(self._getSubTreeLength(root.left),
+                       self._getSubTreeLength(root.right))
