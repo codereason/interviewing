@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="696ee65d-cff4-4e8d-b0e2-1cba71c5671f" name="Default" comment="interview">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/basic/Tree/树的遍历顺序.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/leetcode/Tree/144. Binary Tree Preorder Traversal.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/algorithms/leetcode/Pow(x,n).py" afterPath="$PROJECT_DIR$/algorithms/leetcode/50. Pow(x, n).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/algorithms/leetcode/merge_2_sorted_lists.py" afterPath="$PROJECT_DIR$/algorithms/leetcode/21. Merge Two Sorted Lists.py" />
+    <list default="true" id="696ee65d-cff4-4e8d-b0e2-1cba71c5671f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/basic/Tree/中序遍历后继节点.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/basic/Tree/打印二叉树.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/leetcode/Tree/106. Construct Binary Tree from Inorder and Postorder Traversal.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/basic/Tree/二叉树遍历_递归&amp;迭代.py" afterPath="$PROJECT_DIR$/algorithms/basic/Tree/二叉树遍历_递归&amp;迭代.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/leetcode/Sorting/164. Maximum Gap.py" afterPath="$PROJECT_DIR$/algorithms/leetcode/Sorting/164. Maximum Gap.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py" afterPath="$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py" afterPath="$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +40,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="二叉树遍历_递归&amp;迭代.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/二叉树遍历_递归&amp;迭代.py">
+      <file leaf-file-name="141. Linked List Cycle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/141. Linked List Cycle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state relative-caret-position="420">
+              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="160. Intersection of Two Linked Lists.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/160. Intersection of Two Linked Lists.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array_Partition_I.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Array/Array_Partition_I.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,8 +73,58 @@
       <file leaf-file-name="94. Binary Tree Inorder Traversal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            <state relative-caret-position="218">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="中序遍历后继节点.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/中序遍历后继节点.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="75. Sort Colors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="106. Construct Binary Tree from Inorder and Postorder Traversal.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/106. Construct Binary Tree from Inorder and Postorder Traversal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".md5" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/.md5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sorting.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/Sorting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -64,75 +133,8 @@
       <file leaf-file-name="144. Binary Tree Preorder Traversal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/144. Binary Tree Preorder Traversal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="z字形打印矩阵.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/basic/z字形打印矩阵.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="联通第3题.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/basic/联通第3题.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="树的遍历顺序.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/树的遍历顺序.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="164. Maximum Gap.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Sorting/164. Maximum Gap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-265">
-              <caret line="18" column="74" lean-forward="false" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="50. Pow(x, n).py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/50. Pow(x, n).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hamming Distance.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Hamming Distance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="21. Merge Two Sorted Lists.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/leetcode/21. Merge Two Sorted Lists.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+            <state relative-caret-position="572">
+              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -171,7 +173,6 @@
         <option value="$PROJECT_DIR$/algorithms/basic/Sorting/BubbleSort.py" />
         <option value="$PROJECT_DIR$/algorithms/basic/Sorting/Sorting.py" />
         <option value="$PROJECT_DIR$/algorithms/leetcode/Sorting/164_Maximum Gap.py" />
-        <option value="$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py" />
         <option value="$PROJECT_DIR$/algorithms/basic/Stack &amp; Queue/Stacks.py" />
         <option value="$PROJECT_DIR$/algorithms/basic/转圈打印矩阵.py" />
         <option value="$PROJECT_DIR$/algorithms/basic/z字形打印矩阵.py" />
@@ -189,9 +190,14 @@
         <option value="$PROJECT_DIR$/algorithms/leetcode/50. Pow(x, n).py" />
         <option value="$PROJECT_DIR$/algorithms/leetcode/merge_2_sorted_lists.py" />
         <option value="$PROJECT_DIR$/algorithms/leetcode/21. Merge Two Sorted Lists.py" />
-        <option value="$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py" />
         <option value="$PROJECT_DIR$/algorithms/leetcode/Tree/144. Binary Tree Preorder Traversal.py" />
         <option value="$PROJECT_DIR$/algorithms/basic/Tree/二叉树遍历_递归&amp;迭代.py" />
+        <option value="$PROJECT_DIR$/algorithms/leetcode/Tree/145. Binary Tree Postorder Traversal.py" />
+        <option value="$PROJECT_DIR$/algorithms/basic/Tree/打印二叉树.py" />
+        <option value="$PROJECT_DIR$/algorithms/leetcode/Tree/106. Construct Binary Tree from Inorder and Postorder Traversal.py" />
+        <option value="$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py" />
+        <option value="$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py" />
+        <option value="$PROJECT_DIR$/algorithms/basic/Tree/中序遍历后继节点.py" />
       </list>
     </option>
   </component>
@@ -202,10 +208,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="986" />
-    <option name="y" value="21" />
-    <option name="width" value="934" />
-    <option name="height" value="1059" />
+    <option name="x" value="52" />
+    <option name="y" value="-4" />
+    <option name="width" value="1869" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -284,7 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tree" />
+              <option name="myItemId" value="Sorting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,7 +312,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sorting" />
+              <option name="myItemId" value="LinkedList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leetcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leetcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Array" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,6 +397,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stack &amp; Queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interviewing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sorting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -805,7 +899,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538216090670</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="interview">
+      <created>1538289341178</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1538289341178</updated>
+    </task>
+    <task id="LOCAL-00020" summary="interview">
+      <created>1538291615078</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1538291615078</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -818,14 +926,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="986" y="21" width="934" height="1059" extended-state="4" />
-    <editor active="true" />
+    <frame x="52" y="-4" width="1869" height="1085" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914415" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13000548" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3284974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23212436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -891,34 +998,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Array/Array_Partition_I.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Rotate String.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/Sorting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Hamming Distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Rotated Digits.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -965,6 +1044,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,6 +1102,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,13 +1132,6 @@
         <state relative-caret-position="0">
           <caret line="557" column="26" lean-forward="false" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/.md5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1103,20 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/24dian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/Sorting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/basic/Stack &amp; Queue/Stacks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1132,33 +1192,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Array/Array_Partition_I.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/leetcode/DP/54. Spiral Matrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1018">
           <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/141. Linked List Cycle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/160. Intersection of Two Linked Lists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,14 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="91" lean-forward="false" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="26" lean-forward="false" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1213,11 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/树的遍历顺序.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/basic/z字形打印矩阵.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1242,26 +1266,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py">
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/145. Binary Tree Postorder Traversal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        <state relative-caret-position="800">
+          <caret line="69" column="33" lean-forward="false" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/144. Binary Tree Preorder Traversal.py">
+    <entry file="file://$PROJECT_DIR$/algorithms/24dian.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="465">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/二叉树遍历_递归&amp;迭代.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        <state relative-caret-position="1830">
+          <caret line="122" column="44" lean-forward="false" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/树的遍历顺序.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/打印二叉树.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/144. Binary Tree Preorder Traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/.md5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/basic/Sorting/Sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/141. Linked List Cycle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/94. Binary Tree Inorder Traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Tree/106. Construct Binary Tree from Inorder and Postorder Traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Sorting/75. Sort Colors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/LinkedList/160. Intersection of Two Linked Lists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/leetcode/Array/Array_Partition_I.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/basic/Tree/中序遍历后继节点.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding />
         </state>
       </provider>
