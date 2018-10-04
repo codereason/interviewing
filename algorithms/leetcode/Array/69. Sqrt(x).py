@@ -36,10 +36,13 @@ class Solution:
             mid = (left + right) // 2  # mid一定是整数
             if (x == mid ** 2) or ((mid + 1) ** 2 > x and mid ** 2 < x):
                 return (mid)
-
             elif x > mid ** 2:
                 left = mid
             else:
                 right = mid
 
         return left
+
+    def mySqrt2(self, x):
+        import math
+        return int (math.sqrt(x))
