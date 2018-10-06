@@ -18,6 +18,8 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 '''
 使用双指针法，一个在数组开头一个在数组末尾
 '''
+
+
 class Solution:
     def twoSum(self, numbers, target):
         """
