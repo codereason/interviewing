@@ -31,6 +31,8 @@ Input:     1         1
 
 Output: false
 '''
+
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -45,8 +47,10 @@ class Solution(object):
         :type q: TreeNode
         :rtype: bool
         """
-        if  p is None and q is None:return True
+        if p is None and q is None: return True
 
         if p and q and p.val == q.val:
-            return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
-        else: return False
+            return self.isSameTree(p.left, q.left) and self.isSameTree(
+                p.right, q.right)
+        else:
+            return False

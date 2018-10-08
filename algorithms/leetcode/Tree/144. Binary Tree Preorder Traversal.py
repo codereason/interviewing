@@ -15,12 +15,14 @@ Output: [1,2,3]
 Follow up: Recursive solution is trivial, could you do it iteratively?
 '''
 
+
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution(object):
     def preorderTraversal(self, root):
@@ -45,9 +47,8 @@ class Solution(object):
             return []
         else:
 
-
             stack.append(root)
-            while(stack):
+            while (stack):
                 root = stack.pop()
                 list.append(root.val)
                 print(root.val)

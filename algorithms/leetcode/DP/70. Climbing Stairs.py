@@ -21,16 +21,18 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 '''
+
+
 class Solution:
     def climbStairs(self, n):
         """
         :type n: int
         :rtype: int
         """
-        if n == 1 or n == 2 :return n
-        a,sums=1,2
-        for i in range(3,n+1):
+        if n == 1 or n == 2: return n
+        a, sums = 1, 2
+        for i in range(3, n + 1):
             t = sums
-            sums = a+sums
+            sums = a + sums
             a = t
         return sums
