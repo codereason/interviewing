@@ -9,6 +9,8 @@ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 '''
+
+
 # class Solution:
 #     def addTwoNumbers(self, l1, l2):
 #         if l1 is None:return l2
@@ -50,7 +52,7 @@ class Solution:
         cur = ListNode(0)
         res = cur
         flag = 0
-        while((l1 or l2)):
+        while ((l1 or l2)):
             l1val = l1.val if l1 else 0
             l2val = l2.val if l2 else 0
 
@@ -58,28 +60,28 @@ class Solution:
             # print(l1val,l2val,cur.val)
             flag = 0
             if cur.val >= 10:
-
                 flag = 1
-                cur.val-=10
+                cur.val -= 10
 
-            if flag == 1 :
-                cur.next= ListNode(1)
-            else:cur.next = ListNode(0)
+            if flag == 1:
+                cur.next = ListNode(1)
+            else:
+                cur.next = ListNode(0)
             tail = cur
             cur = cur.next
 
             l1 = l1.next if l1 and l1.next else None
             l2 = l2.next if l2 and l2.next else None
         if cur.val == 0:  ##如果两个三位数相加还是三位数会出现尾巴，如[7,0,8,0]，这个tail尾指针就是指向实际最高那一位并把多余的0位
-                          ##去掉
+            ##去掉
             tail.next = None
 
         return res
-    # def getLength(self,node):
-    #     count = 0
-    #     if node is None:return 0
-    #     else:
-    #         while(node):
-    #             count+=1
-    #             node = node.next
-    #         return count
+        # def getLength(self,node):
+        #     count = 0
+        #     if node is None:return 0
+        #     else:
+        #         while(node):
+        #             count+=1
+        #             node = node.next
+        #         return count

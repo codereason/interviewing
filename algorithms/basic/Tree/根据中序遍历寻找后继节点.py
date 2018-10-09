@@ -33,7 +33,7 @@ class Solution:
                 return self.getTreeMostLeft(node.right)
             else:
                 parent = node.parent
-                while(parent):
+                while (parent):
                     if node is parent.left:
                         return parent
                     if node is parent.right:
@@ -41,9 +41,6 @@ class Solution:
                         parent = node.parent
 
         return parent
-
-
-
 
     def getTreeMostLeft(self, node):
         if node is None:

@@ -20,6 +20,8 @@ Note:
 n is a 32-bit signed integer, within the range [−231, 231 − 1]
 
 '''
+
+
 class Solution(object):
     def myPow(self, x, n):
         """
@@ -27,12 +29,12 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
-        if n == 0:return 1
+        if n == 0: return 1
         if n < 0:
             n = -n
-            x = 1/x
+            x = 1 / x
         if n > 0:
-            if n%2 == 0:
-                return self.myPow(x*x,n/2)
+            if n % 2 == 0:
+                return self.myPow(x * x, n / 2)
             else:
-                return x * self.myPow(x*x,(n-1)/2)
+                return x * self.myPow(x * x, (n - 1) / 2)

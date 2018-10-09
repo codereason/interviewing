@@ -19,6 +19,8 @@ Try to do this in one pass.
 '''
 一种方法是：从末尾删去第n个相当于从头删去第L-n+1个，此出不再赘述
 '''
+
+
 class Solution(object):
     def removeNthFromEnd(self, head, n):
         """
