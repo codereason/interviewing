@@ -30,3 +30,28 @@
 本文来自 Shwan_Ma 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/shwan_ma/article/details/76616192?utm_source=copy 
 
 '''
+
+
+List = [[0,0,1,0,1,0],
+        [1,1,1,0,1,0],
+        [1,0,0,1,0,0],
+        [0,0,0,0,0,0]]  #有三个岛
+
+#遍历所有的点，遇到1感染这些1区域，把1全部改为2，岛的数量+1；
+#遍历剩下的非2区域，继续这样做
+print (len(List[0]))
+class Resoultion:
+    def countIslands(self,areas):
+        N = len(areas)
+        M = len(areas[0])
+        count = 0
+        for i in range(N):
+            for j in range(M):
+                if areas[i][j] == 1:
+                    count+=1
+                    self.infect(i,j,N,M)
+        return count
+
+
+    def infect(self,i,j,N,M):
+        if (i > 1 or j > 1 or i)
