@@ -39,61 +39,67 @@ trie树把每个关键字保存在一条路径上，而不是一个节点中
 如果用链表存储，查询时需要遍历链表，查询效率有所降低  
 
 ```
-define ALPHABET_NUM 26
-typedef struct trie_node{
-   char value;
-   bool isKey;/*是否代表一个关键字*/
-   int count; /*可用于词频统计，表示关键字出现的次数*/
-   struct Node *subTries[ALPHABET];
-}*Trie
 
-Trie Trie_create();
-int Trie_insert(Trie trie,char *word); // 插入一个单词
-int Trie_search(Trie trie,char *word);// 查找一个单词
-int Trie_delete(Trie trie,char *word);// 删除一个单词
-
-Trie Trie_create(){
-    trie_node* pNode = new trie_node();
-    pNode->count = 0;
-    for(int i=0; i<ALPHABET_SIZE; ++i)
-        pNode->children[i] = NULL;
-    return pNode;
-}
-
-void trie_insert(trie root, char* key)
-{
-    trie_node* node = root;
-    char* p = key;
-    while(*p)
-    {
-        if(node->children[*p-'a'] == NULL)
-        {
-            node->children[*p-'a'] = create_trie_node();
-        }
-        node = node->children[*p-'a'];
-        ++p;
-    }
-    node->count += 1;
-}
-
-/**
- * 查询：不存在返回0，存在返回出现的次数
- */ 
-int trie_search(trie root, char* key)
-{
-    trie_node* node = root;
-    char* p = key;
-    while(*p && node!=NULL)
-    {
-        node = node->children[*p-'a'];
-        ++p;
-    }
+#coding=utf8
+"""代码实现了最简单的字典树，只支持由小写字母组成的字符串。
+在此代码基础上扩展一下，就可以实现比较复杂的字典树，比如带统计数的，或支持更多字符的字典树，
+或者是支持删除等操作。
+"""
+ 
+class TrieNode(object):
+    def __init__(self):
+        # 是否构成一个完成的单词
+        self.is_word = False
+        self.children = [None] * 26
+ 
+class Trie(object):
+    def __init__(self):
+        self.root = TrieNode()
     
-    if(node == NULL)
-        return 0;
-    else
-        return node->count;
-}
+    def add(self, s):
+        """Add a string to this trie."""
+        p = self.root
+        n = len(s)
+        for i in range(n):
+            if p.children[ord(s[i]) - ord('a')] is None:
+                new_node = TrieNode()
+                if i == n - 1: 
+                    new_node.is_word = True
+                p.children[ord(s[i]) - ord('a')] = new_node
+                p = new_node
+            else:
+                p = p.children[ord(s[i]) - ord('a')]
+                if i == n - 1:
+                    p.is_word = True
+                    return
+    
+    def search(self, s):
+        """Judge whether s is in this trie."""
+        
+        p = self.root
+        for c in s:
+            p = p.children[ord(c) - ord('a')]
+            if p is None:
+                return False
+        if p.is_word:
+            return True
+        else:
+            return False   
+    
+if __name__ == '__main__':
+    trie = Trie()
+    trie.add('str')
+    trie.add('acb')
+    trie.add('acblde')
+    print trie.search('acb')
+    print trie.search('ac')
+    trie.add('ac')
+    print trie.search('ac')
+
+作者：Jiang阿涵
+链接：https://www.jianshu.com/p/9dae246f6ff6
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 ```
 
