@@ -21,6 +21,9 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 '''
+'''
+其实分析之后正是斐波那契数列，也可以用DP做
+'''
 
 
 class Solution:
