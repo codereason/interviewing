@@ -35,16 +35,12 @@ class Solution:
                         cur += 1
                         less += 1
 
-                        continue
-                    if arr[cur] == pivot:
+                    elif arr[cur] == pivot:
                         cur += 1
 
-                        continue
-                    if arr[cur] > pivot:
+                    else:
                         arr[more], arr[cur] = arr[cur], arr[more]
                         more -= 1
-
-                        continue
 
         partition(nums, 1)
 
