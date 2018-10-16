@@ -35,6 +35,6 @@ class Solution(object):
             x = 1 / x
         if n > 0:
             if n % 2 == 0:
-                return self.myPow(x * x, n / 2)
+                return self.myPow(x * x, n // 2)
             else:
-                return x * self.myPow(x * x, (n - 1) / 2)
+                return x * self.myPow(x * x, (n - 1) // 2)

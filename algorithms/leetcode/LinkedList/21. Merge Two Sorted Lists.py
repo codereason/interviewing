@@ -37,3 +37,23 @@ class Solution(object):
         if l1 is None: dummy.next = l2
         if l2 is None: dummy.next = l1
         return pointer.next
+
+
+class Solution2:
+    def mergeTwoLists(self, l1, l2):
+        """
+        用递归的方法做的
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        if l1 is None: return l2
+        if l2 is None: return l1
+        root = ListNode(-1)
+        if l1.val > l2.val:
+            root = l2
+            root.next = self.mergeTwoLists(l2.next, l1)
+        elif l1.val <= l2.val:
+            root = l1
+            root.next = self.mergeTwoLists(l1.next, l2)
+        return root
