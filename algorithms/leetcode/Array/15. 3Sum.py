@@ -18,7 +18,7 @@ A solution set is:
 
 '''
 '''
-会超时
+O(n*n)解法，非常耗时
 '''
 
 class Solution(object):
@@ -34,6 +34,7 @@ class Solution(object):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
                 ###加一个判断 判断是否这个target数曾经出现过 如果出现过直接跳过去 可以省去时间避免TLE
+
             left, right = i + 1, len(nums) - 1
             while (left < right):
 
