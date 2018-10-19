@@ -9,7 +9,7 @@ def replaceSpaces2(s):
             lst[lst.index(item)]="%20"
     print(lst)
     return ''.join(lst)
-def classic
+
 if __name__ == '__main__':
     s = "we are young"
     print(replaceSpaces2(s))
