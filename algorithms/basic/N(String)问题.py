@@ -8,8 +8,8 @@ def concat(s):
     for item in s:
         if item == "(":
             count_left+=1
-        if item == ")":
-            if count_left ==
+        # if item == ")":
+        #     if count_left ==
 
 if __name__ == '__main__':
 
