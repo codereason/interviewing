@@ -22,7 +22,7 @@ n is a 32-bit signed integer, within the range [−231, 231 − 1]
 '''
 
 
-class Solution(object):
+class Solution:
     def myPow(self, x, n):
         """
         :type x: float
@@ -30,11 +30,15 @@ class Solution(object):
         :rtype: float
         """
         if n == 0: return 1
-        if n < 0:
-            n = -n
-            x = 1 / x
-        if n > 0:
-            if n % 2 == 0:
-                return self.myPow(x * x, n // 2)
-            else:
-                return x * self.myPow(x * x, (n - 1) // 2)
+        if n < 0: return 1.0 / self.myPow(x, -1 * n)
+        t = self.myPow(x*x, n // 2)
+        if n % 2 == 0:
+            return t
+        else:
+            return x*t
+
+
+if __name__ == '__main__':
+    x = 1.00001
+    n = 123456
+    print(Solution().myPow(x, n))
