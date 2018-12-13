@@ -1,7 +1,7 @@
 '''
 3(ab)=ababab
 3(2(a))b=aaaaaab
-
+解法，思路？？
 '''
 def concat(s):
     count_left=0
