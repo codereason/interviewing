@@ -11,6 +11,11 @@ def concat(s):
         # if item == ")":
         #     if count_left ==
 
+def find_first_kuohao_neirong(s):
+    return s.split("(")
+
+
 if __name__ == '__main__':
 
-    s = '3(2(a))b'
+    s = '3(2(a))'
+    print(find_first_kuohao_neirong(s))
