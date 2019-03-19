@@ -6,6 +6,11 @@ def printLinkedListReverse(root):
             root = root.next
         return List[::-1]
 
+def printLinkedListReverse2(root):
+    if root is not None:
+        printLinkedListReverse2(root.next)
+        print(root.val)
+
 class Node():
     def __init__(self, val):
         self.next = None
@@ -21,4 +26,5 @@ if __name__ == '__main__':
     node3.next = node4
     node4.next = node5
     node5.next=None
-    print(printLinkedListReverse(node1))
+    # print(printLinkedListReverse(node1))
+    printLinkedListReverse2(node1)
