@@ -51,8 +51,8 @@ class SortingSolution:
                     equal.append(arr[i])
                 else:
                     more.append(arr[i])
-            less = self.QuickSort_2(less)
-            more = self.QuickSort_2(more)
+            # less = self.QuickSort_2(less)
+            # more = self.QuickSort_2(more)
             return self.QuickSort_2(less) + equal + self.QuickSort_2(more)
 
     def QuickSort_1(self, arr, low, high):
@@ -242,8 +242,8 @@ if __name__ == '__main__':
     # seq = [3, 2, 1, 4, 5]
 
     s = SortingSolution()
-
+    print(s.QuickSort_2(seq))
     # print(s.QuickSort_2(seq,0,len(seq)-1))
     # print(s.partition2(seq, 0, len(seq) - 1))
-    print(s.biggestDiff(seq))
+    # print(s.biggestDiff(seq))
     # print(seq)

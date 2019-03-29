@@ -41,6 +41,22 @@ def sum_array(list):
     return max(ans)
 
 
+class Solution2:
+    '''
+    这个更好一点，初始化数组最好是初始成--无穷大，
+    '''
+    def maxSubArray(self, list: List[int]) -> int:
+        if len(list) == 1:
+            return list[0]
+        if len(list) == 0:
+            return 0
+        dp = (len(list) + 1) * [float('-inf')]
+        dp[0] = list[0]
+
+        for i in range(1, len(list)):
+            dp[i] = dp[i - 1] + list[i] if dp[i - 1] + list[i] > list[i] else list[i]
+
+        return max(dp)
 
 
 if __name__ == '__main__':
