@@ -13,10 +13,10 @@ class TreeNode:
 class Solution:
     def recon(self, list1, list2):
         '''
-        
+
         :param list1: 前序
         :param list2: 中序
-        :return TreeNode 
+        :return TreeNode
         '''
         if len(list1) == 0: return None
         root = TreeNode(list1[0])
