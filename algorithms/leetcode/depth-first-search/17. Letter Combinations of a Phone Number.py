@@ -26,22 +26,26 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 
 class Solution:
-    def letterCombinations(self, digits):
-        if len(digits) == 0:
+    def letterCombinations(self, string):
+        if len(string) == 0:
             return []
-        button = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
-        ans = []
-        self.dfs(0, digits, button, '', ans)
-        return ans
+        button = {"2":'abc',"3":'def', "4":'ghi',"5": 'jkl',"6": 'mno', "7":'pqrs', "8":'tuv', "9":'wxyz'}
+        self.res=[]
 
-    def dfs(self, i, digits, button, cur, ans):
 
-        if i== len(digits):
-            ans.append(cur)
-            return
-        for c in button[int(digits[i])]:
+        def dfs(string,index,temp):
 
-            self.dfs(i + 1, digits,button,cur + c, ans)
+            if len(temp) == len(string):
+                self.res.append("".join(x for x in temp) )
+                return
+            for char in button[string[index]]:
+                temp.append(char)
+                dfs(string, index+1,temp)
+                temp.pop()
+
+        dfs(string,0,[])
+        return self.res
+
 if __name__ == '__main__':
     s=Solution()
     print(s.letterCombinations("23"))
