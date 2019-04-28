@@ -66,6 +66,53 @@ left一定是向右移动的，不可能撤回到已经移动过的位置。
             res = max(res,right-left+1)
         return res
 
+    def lengthOfLongestSubstring2(self, s):
+        '''
+        所谓虫取法，就是根据某个条件交替移动前后指针，使得在双指针之内的这部分是满足题意要求的。
+
+具体思路比较简单易懂，使用双指针，[left, right]双闭区间来保存子串的左右区间，对应着这个区间我们维护一个set，这个set里面全部是不重复的字符。
+
+使用while循环，如果right字符不在set中，就让它进去；如果right在，就把left对应的字符给remove出去。
+
+所以，当我们得到一个right位置的字符时，通过移动left和修改[left,right]区间内对应的的set，来保持了一个最小的不重复字符区间。这里需要注意的是，移动left的次数不一定就是1次，因为我们要保证left和right之间没有重复字符，而新添加的right字符出现的位置不一定刚刚就是left指向的位置。
+
+比如：
+
+a b c b b c b b
+0 1 2 3 4 5 6 7
+
+当right移动到3的时候字符时b，此时，set = {a, b, c}中，left=0，字符b在set中。
+
+所以在while循环中反复移动left，当left移动到2的位置时，此时set = {c},字符b已经不在set中。
+
+按照这个方式移动，set的个数最多的值即为最长子串。
+
+一定注意：[left, right]区间和set是对应的，要同时维护。
+
+下面的python代码是根据right指向的字符是否出现在set中而反复的进行循环，代码如下：
+---------------------
+作者：负雪明烛
+来源：CSDN
+原文：https://blog.csdn.net/fuxuemingzhu/article/details/82022530
+版权声明：本文为博主原创文章，转载请附上博文链接！
+        :param s:
+        :return:
+        '''
+        if not s:return 0
+        left,right=0,0
+        _ = set()
+        res = 0
+        while left < len(s) and right < len(s):
+            if s[right] in _:
+                if s[left] in _:
+                    _.remove(s[left])
+                left+=1
+            else:
+                _.add(s[right])
+                right+=1
+                res = max(res,len(_))
+        return res
+
 if __name__ == '__main__':
     s="pwwkew"
     print(Solution().lengthOfLongestSubstring(s))
