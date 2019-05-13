@@ -104,7 +104,7 @@ a b c b b c b b
         res = 0
         while left < len(s) and right < len(s):
             if s[right] in _:
-                if s[left] in _:
+                if s[left] in _ :
                     _.remove(s[left])
                 left+=1
             else:
