@@ -4,65 +4,21 @@ class Solution:
     @param A: Given n items with size A[i]
     @return: The maximum size
     """
-
     def backPack(self, m, A):
         # write your code here
-        '''
-        基本上所有跟背包相关的问题的方程都是由它衍生出来的。所以有必要将它详细解释一下：“将前i件物品放入容量为v的背包中”这个子问题，若只考虑第i件物品的策略（放或不放），
-        那么就可以转化为一个只牵扯前i-1件物品的问题。如果不放第i件物品，那么问题就转化为“前i-1件物品放入容量为v的背包中”，价值为f[i-1][v]；如果放第i件物品，
-        那么问题就转化为“前i-1件物品放入剩下的容量为v-c[i]的背包中”，此时能获得的最大价值就是f[i-1][v-c[i]]再加上通过放入第i件物品获得的价值w[i]。
-        :param m:
-        :param A:
-        :return:
-        '''
-        dp = [[0] * (m + 1) for _ in range(len(A) + 1)]
-
-        for i in range(1, len(A)+1):
-            for j in range(0, m+1):
-
-                dp[i][j]=dp[i-1][j]
-                if j >= A[i-1]:
-                    dp[i][j] = max(dp[i][j], dp[i - 1][j - A[i-1]] + A[i-1])
-        print(dp[len(A)][m])
-
-    def backPack2(self,m,A):
-        '''
-        一维没看懂
-        :param m:
-        :param A:
-        :return:
-        '''
-        dp = (m+1)*[0]
-        for i in range(1,len(A)):
+        f = (m+1)*[0]
+        f[0]=0
+        for i in range(len(A)):
             for j in range(m,1,-1):
                 if j>=A[i]:
-                    dp[j]=max(dp[j],dp[j-A[i]]+A[i])
-        print(max(dp))
+                    f[j] = max(f[j],f[j-A[i]]+A[i])
+        return f[m]
+        #二维数组的解法
 
-if __name__ == '__main__':
-    '''
-    92. 背包问题
-中文English
-在n个物品中挑选若干物品装入背包，最多能装多满？假设背包的大小为m，每个物品的大小为A[i]
+    def backpack2(self,m,A):
+        dp = 
+  id
 
-样例
-样例 1:
-	输入:  [3,4,8,5], backpack size=10
-	输出:  9
-
-样例 2:
-	输入:  [2,3,5,7], backpack size=12
-	输出:  12
-	
-挑战
-O(n x m) time and O(m) memory.
-
-O(n x m) memory is also acceptable if you do not know how to optimize memory.
-
-注意事项
-你不可以将物品进行切割。
-'''
-    A = [3,4,8,5]
-    # A=[2,3,5,7]
-    m = 10
-    Solution().backPack(m,A)
+import pandas as pd
+a = pd.read_csv(".csv")
+import sklearn.tree
