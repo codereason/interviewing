@@ -13,6 +13,38 @@ Pop or push each element at-max once. O(N)
 When moves to a new number, iterate through back of the queue, removes all numbers that are not greater than the new one, and then insert the new one to the back.
 findMax only need to take the first one of the queue.
 To remove a number outside the window, only compare whether the current index is greater than the front of queue. If so, remove it.*
+
+使用双端队列，队列元素降序排序，队首元素为所求最大值。滑动窗口右移，若出现的元素比队首（最大元素）大，此时清空队列，并将最大值插入队列。若比当前值小，则插入尾部。每次窗口右移的时候需要判断当前的最大值是否在有效范围，若不在，则需要将其从队列中删除。
+
+
+遍历数组nums，使用双端队列deque维护滑动窗口内有可能成为最大值元素的数组下标
+
+由于数组中的每一个元素至多只会入队、出队一次，因此均摊时间复杂度为O(n)
+
+记当前下标为i，则滑动窗口的有效下标范围为[i - (k - 1), i]
+
+若deque中的元素下标＜ i - (k - 1)，则将其从队头弹出，deque中的元素按照下标递增顺序从队尾入队。
+
+这样就确保deque中的数组下标范围为[i - (k - 1), i]，满足滑动窗口的要求。
+
+当下标i从队尾入队时，顺次弹出队列尾部不大于nums[i]的数组下标（这些被弹出的元素由于新元素的加入而变得没有意义）
+
+deque的队头元素即为当前滑动窗口的最大值
+
+
+利用一个双端队列, 我们可以在O(1)的时间内删除队首和队尾元素, 并且可以在O(1)的时间内随机存取, 也就是说双端队列综合了链表和数组的优点.
+
+在队列中我们存储元素在数组中的位置, 并且维持队列的严格递减, 也就说队首元素最大的,代表在数组中到队首元素那个位置之前最大的数. 
+
+当遍历到一个新元素时, 如果队列里有比当前元素小的, 就将其移除队列, 以保证队列的递减. 
+
+当队列元素位置之差大于k, 就将队首元素移除.
+--------------------- 
+作者：小榕流光 
+来源：CSDN 
+原文：https://blog.csdn.net/qq508618087/article/details/51003381 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
 '''
 from collections import deque
 class Solution(object):

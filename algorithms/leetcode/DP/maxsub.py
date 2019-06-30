@@ -25,4 +25,4 @@ dp思想
     return max(dp)
 
 if __name__ == '__main__':
-    print(FindGreatestSumOfSubArray([6,-3,-2,7,-15,1,2,2]))
+    print(FindGreatestSumOfSubArray([6,-3,-2,7,-2,1,2,2]))
