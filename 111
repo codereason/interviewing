@@ -1,34 +1,14 @@
-class Solution(object):
-    def candyCrush(self, board):
-        """
-        :type board: List[List[int]]
-        :rtype: List[List[int]]
-        """
-        R, C = len(board), len(board[0])
-        changed = True
+二叉搜索树(BST)
+二叉搜索树也是一种树，适用与一般二叉树的全部操作，但二叉搜索树能够实现数据的快速查找
+性质：
+非空左子树的所有键值小于其根节点的键值
+非空右子树的所有键值大于其根节点的键值
+左右子树都是二叉搜索树
 
-        while changed:
-            changed = False
-
-            for r in xrange(R):
-                for c in xrange(C-2):
-                    if abs(board[r][c]) == abs(board[r][c+1]) == abs(board[r][c+2]) != 0:
-                        board[r][c] = board[r][c+1] = board[r][c+2] = -abs(board[r][c])
-                        changed = True
-
-            for r in xrange(R-2):
-                for c in xrange(C):
-                    if abs(board[r][c]) == abs(board[r+1][c]) == abs(board[r+2][c]) != 0:
-                        board[r][c] = board[r+1][c] = board[r+2][c] = -abs(board[r][c])
-                        changed = True
-
-            for c in xrange(C):
-                i = R-1
-                for r in reversed(xrange(R)):
-                    if board[r][c] > 0:
-                        board[i][c] = board[r][c]
-                        i -= 1
-                for r in reversed(xrange(i+1)):
-                    board[r][c] = 0
-
-        return board　
+二叉搜索树的插入、查找、删除
+删除主要分三种情况来讨论：
+（1）要删除的是叶子结点：直接删除
+（2）要删除的节点只有一个孩子节点：将其父节点的指针指向要删除节点的孩子节点
+（3）要删除的节点有左、右两颗子树：
+用另一个结点替代被删除结点：右子树的最小元素或者左子树的最大元素
+其中删除操作的代码较复杂，暂未给出。
