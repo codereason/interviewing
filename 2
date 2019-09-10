@@ -91,3 +91,55 @@ q = ''
 for e in w:
     q += e +' '
 print(q)
+
+
+
+作者：Smiling永恒
+链接：https://www.nowcoder.com/discuss/253445?type=post&order=create&pos=&page=1
+来源：牛客网
+
+if __name__ == '__main__':
+    a, b = input().split(":")
+    res = []
+    for m in range(2, 100):
+        hour, mins = 0, 0
+        flag1, flag2 = 1, 1
+        ok1, ok2 = 1, 1
+        mi = 0 # 次幂
+        for i in range(len(a)-1, -1, -1):
+            if 57 >= ord(a[i]) >= 48:           # 使用ascii码判断是否为数字
+                if int(a[i]) >= m:
+                    flag1 = 0
+                    break
+                hour += int(a[i]) * m ** mi
+            elif ord(a[i]) >= 65:               # 使用ascii判断是否为字母
+                if ord(a[i])-55 >= m:
+                    flag1 = 0
+                    break
+                hour += (ord(a[i])-55) * m ** mi
+            mi += 1
+        if hour >= 24:
+            ok1 = 0
+ 
+        mi = 0
+        if flag1 and ok1:
+            for i in range(len(b)-1, -1, -1):
+                if 57 >= ord(b[i]) >= 48:  # 数字
+                    if int(b[i]) >= m:
+                        flag2 = 0
+                        break
+                    mins += int(b[i]) * m ** mi
+                elif ord(b[i]) >= 65:  # 字母
+                    if ord(b[i]) - 55 >= m:
+                        flag2 = 0
+                        break
+                    mins += (ord(b[i]) - 55) * m ** mi
+                mi += 1
+            if mins >= 60:
+                ok2 = 0
+        if not ok1 or not ok2:
+            break
+        if flag1 and flag2 and ok2 and ok1:
+            res.append(m)
+    for  r in res:
+           print(r)
