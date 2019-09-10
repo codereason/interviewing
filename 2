@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <string.h>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+const int maxn = 1e5;
+double DB[maxn];
+int main()
+{
+    ios::sync_with_stdio(false);
+    double x1 = 0.5, x2 = 2;
+    DB[4] = 2;
+    for(int i = 5; i <= maxn ; ++ i)
+    {
+        if(i % 4 == 1)DB[i] = DB[i - 1] + x1, x1 += 1.0;
+        if(i % 4 == 2)DB[i] = DB[i - 2] + x2, x2 += 2.0;
+        if(i % 4 == 3)DB[i] = DB[i - 1] + x1;
+        if(i % 4 == 0) DB[i] = DB[i - 2] + x2;
+    }
+    int t;
+    cin >> t;
+    while(t --)
+    {
+        double n;
+        cin >> n;
+        for(int i = 4; i <= maxn; ++ i)
+        {
+            if(DB[i] >= n)
+            {
+                cout << i << endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
