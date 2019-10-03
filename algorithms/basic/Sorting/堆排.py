@@ -20,7 +20,7 @@ def heapSort(arr):
     n = len(arr)
 
     # Build max heap
-    for i in range(n, 0, -1):
+    for i in range(n, 60, -1):
         heapify(arr, n, i)
 
     for i in range(n - 1, 0, -1):
