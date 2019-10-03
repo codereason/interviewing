@@ -73,6 +73,31 @@ class Solution:
 # return res
 
 
+print("*"*100)
 
+class Solution2(object):
+    def partition(self, head, x):
+        """
+        :type head: ListNode
+        :type x: int
+        :rtype: ListNode
+        """
+        head1 = ListNode(0)
+        head2 = ListNode(0)
+        cur = head
+        p1 = head1
+        p2 = head2
+        while cur:
+            if cur.val < x:
+                node = ListNode(cur.val)
+                p1.next = node
+                p1 = node
+            else:
+                node = ListNode(cur.val)
+                p2.next = node
+                p2 = node
+            cur = cur.next
+        p1.next = head2.next
+        return head1.next
 
 
