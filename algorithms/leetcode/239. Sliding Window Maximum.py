@@ -77,6 +77,8 @@ class Solution(object):
             if end < len(nums):
                 self.add_to_dq(dq, nums, end)
         return result
+
+
 class Solution2:
     def maxSlidingWindow(self, arr: List[int], k: int) -> List[int]:
         '''

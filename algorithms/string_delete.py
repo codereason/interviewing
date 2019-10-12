@@ -1,0 +1,5 @@
+string = input()
+string = string.replace("0","")
+a = list(string)
+a = sorted(a,reverse=True)
+print("".join(item for item in a))
