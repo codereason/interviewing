@@ -1,4 +1,4 @@
-zhaimport sys
+import sys
 
 
 def check(list):

@@ -32,7 +32,7 @@ class Solution:
             for i in range(len(nums)):
                 if (nums[i]  in temp):
                     continue
-                temp.append(numhs[i])
+                temp.append(nums[i])
                 dfs(nums,temp)
                 temp.pop()
         dfs(nums,[])

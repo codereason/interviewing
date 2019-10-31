@@ -17,8 +17,5 @@ class Solution:
 
     def backpack2(self,m,A):
         dp = 
-  id
 
-import pandas as pd
-a = pd.read_csv(".csv")
 import sklearn.tree

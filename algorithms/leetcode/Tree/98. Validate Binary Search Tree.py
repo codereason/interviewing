@@ -57,6 +57,7 @@ class Solution:
         if root is None:
             return True
 
+
         def in_order_travel(root):
             if not root:
                 return
