@@ -164,7 +164,8 @@ class Solution2:
             return True
             # arr = [board[i*3:i*3 + 3] for j in range(3)]
 
-        return is_row_valid(board) and is_col_valid(board) and is_3_3_valid(board)
+        flag1, flag2, flag3 = is_row_valid(board), is_col_valid(board), is_3_3_valid(board)
+        return flag1 and flag2 and flag3
 
 if __name__ == '__main__':
     s = Solution2()
