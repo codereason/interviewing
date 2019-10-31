@@ -29,7 +29,7 @@ Explanation: Return true because "applepenapple" can be segmented as "apple pen 
 Example 3:
 
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
-Output: false
+Output: falselengthOfLongestSubstring
 '''
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
