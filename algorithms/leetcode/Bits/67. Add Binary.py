@@ -28,7 +28,7 @@ def addBinary(a,b):
         length_diff = -1*(length_diff)
         a+="0"*length_diff
     print(length_diff,a,b)
-hhn
+
     for i in range(max_len):
         tmp = int(a[i]) + int(b[i]) + carry
         carry = 0
