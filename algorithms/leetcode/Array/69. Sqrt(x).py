@@ -43,6 +43,3 @@ class Solution:
 
         return left
 
-    def mySqrt2(self, x):
-        import math
-        return int (math.sqrt(x))

@@ -1,6 +1,6 @@
 string_input= str(input())
 str1,str2 = string_input.split("<ctrip>")
-print(str1,str2)
+# print(str1,str2)
 def edit_dist(str1,str2):
     if len(str1) == 0 or len(str2) ==0:
         return max(len(str1),len(str2))
@@ -21,7 +21,7 @@ def edit_dist(str1,str2):
                 else:
                     c = dp[i-1][j-1]+1
                 dp[i][j] = min(a,b,c)
-    print(dp)
+    # print(dp)
     return dp[-1][-1]
 
 print(edit_dist(str1,str2))
