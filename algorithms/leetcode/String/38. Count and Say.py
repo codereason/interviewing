@@ -51,20 +51,19 @@ class Solution:
     def count_one_number(self,string):
         #J聚合一个
         l = string[0]
-        res = []
+        res = ""
         temp  = string[0]
         for i in range(1,len(string)):
             if string[i]== string[i-1]:
                 temp+=string[i]
             elif string[i] != string[i-1]:
-                res.append([temp,len(temp)])
+                # res.append([temp,len(temp)])
+                res+=str(len(temp))+temp[0]
                 temp = string[i]
             if i == len(string)-1:
-                res.append([temp, len(temp)])
-        result = ""
-        for j in res:
-            result+=str(j[1])+ j[0][0]
-        return result
+                res += str(len(temp)) + temp[0]
+
+        return res
 
 
 
@@ -73,4 +72,4 @@ class Solution:
 if __name__ == '__main__':
     sc =Solution()
     print(sc.count_one_number(str(1211)))
-    print(sc.countAndSay(3))
+    print(sc.countAndSay(5))
