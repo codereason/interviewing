@@ -1,7 +1,12 @@
 # interviewing
+
+Repo里文件名含有 “NotFi” 字眼的都是还没有完成的题目。
+
 使用的网站和资料：
 
-- leetcode
+主要做
+
+- leetcode easy and medium
 - 剑指offer
 - lintcode
 - 牛客网
