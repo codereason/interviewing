@@ -4,18 +4,20 @@ class Solution:
         if not nums:
             return []
         nums.sort()
+        visited = [0]*len(nums)
         def dfs(temp,nums):
-            print(self.res)
+            print(self.res,"res")
             if len(temp[:]) == len(nums) :
                 if temp not in self.res:
                     self.res.append(temp[:])
-
-            for i in range(len(nums)):
-                if nums[i] in temp:
-                    continue
-                temp.append(nums[i])
-                dfs(temp,nums)
-                temp.pop()
+            else:
+                for i in range(len(nums)):
+                    if nums[i] in temp or nums[i] == nums[i - 1]:
+                        continue
+                    temp.append(nums[i])
+                    print("temp", temp,"i", i)
+                    dfs(temp,nums)
+                    temp.pop()
         dfs([],nums)
         return self.res
 
