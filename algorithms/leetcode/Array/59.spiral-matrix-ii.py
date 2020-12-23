@@ -23,16 +23,50 @@
 
 class Solution:
     def generateMatrix(self, n):
-        total = n**2
+        total = list(range(1,n**2+1))
         cur = 0
         #border
+        if n==1:
+            return [[1]]
+        res = [[0 for i in range(n)] for j in range(n)]
         l,u = 0,0
         r,d = n-1,n-1
-        while cur < total:
+        i,j=l,u
+        while cur < len(total):
             
-        
-        return None
+            while j <= r:
+                res[i][j] = total[cur]
+                cur+=1
+                j+=1
+            i+=1
+            j-=1
+            while i<=d:
+                res[i][j] = total[cur]
+                cur+=1
+                i+=1
+            j-=1
+            i-=1
+            while j>=l:
+                res[i][j] = total[cur]
+                cur+=1
+                j-=1
+            i-=1
+            j+=1
+            while i>=u+1:
+                res[i][j] = total[cur]
+                cur+=1
+                i-=1
+            i+=1
+            j+=1
+            r-=1
+            d-=1
+            l+=1
+            u+=1
+            
+        # for i in res:
+        #     print(i)
+        return res
 
 if __name__ == "__main__":
-    N=8
-    print(Solution().generateMatrix(N))
+    N=2
+    Solution().generateMatrix(N)
