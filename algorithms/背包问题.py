@@ -14,8 +14,3 @@ class Solution:
                     f[j] = max(f[j],f[j-A[i]]+A[i])
         return f[m]
         #二维数组的解法
-
-    def backpack2(self,m,A):
-        dp = 
-
-import sklearn.tree
