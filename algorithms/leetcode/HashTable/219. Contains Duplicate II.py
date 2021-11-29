@@ -25,22 +25,14 @@ class Solution:
         """
         if len(nums) > 1:
             Dict1 = {}  # 存放那个数出现的最早的索引
-
             for i in range(len(nums)):
                 if nums[i] not in Dict1:
                     Dict1[nums[i]] = i
-
                 else:
-
                     if abs(i - Dict1[nums[i]]) <= k:
-
                         return True
                     Dict1[nums[i]] = i
-
-
-
         return False
-
 
 if __name__ == '__main__':
     nums = [2,2]
