@@ -31,4 +31,26 @@ class Solution(object):
         :type s2: str
         :rtype: bool
         """
-        
+        if len(s2)< len(s1):
+            return False
+        if len(s1) == len(s2):
+            return self.check(s1, s2)
+
+        len1,len2 = len(s1),len(s2) 
+        for i in range(0,len2 - len1 + 1):
+            if self.check(s1,s2[i:len1+i]):
+                return True 
+        return False
+
+    def check(self, s1, s2):
+        s1_list,s2_list = [0]*26, [0]*26
+        for char in s1:
+            s1_list[ord(char)-ord('a')] += 1
+
+        for char in s2:
+            s2_list[ord(char)-ord('a')] += 1
+        return s1_list == s2_list
+
+if __name__ == '__main__':
+    so = Solution()
+    print(so.checkInclusion("","eidboaoo"))
