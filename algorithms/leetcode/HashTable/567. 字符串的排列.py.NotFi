@@ -25,6 +25,9 @@ s1 和 s2 仅包含小写字母
 '''
 
 class Solution(object):
+    '''
+    耗时过长，还可以优化
+    '''
     def checkInclusion(self, s1, s2):
         """
         :type s1: str
