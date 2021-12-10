@@ -69,4 +69,4 @@ class Solution:
 
 if __name__ == "__main__":
     N=2
-    Solution().generateMatrix(N)
+    print(Solution().generateMatrix(N))

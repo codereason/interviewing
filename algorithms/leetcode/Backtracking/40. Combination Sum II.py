@@ -66,7 +66,7 @@ class Solution:
 
         return self.res
 
-class ImprovedSolution:
+class Solution2:
     def combinationSum2(self, nums, target):
         if not nums:
             return []
@@ -102,5 +102,7 @@ if __name__ == "__main__":
     # target = 5
     nums = [10, 1, 2, 7, 6, 1, 5]
     target = 8
-    sc = ImprovedSolution()
+    sc = Solution2()
     print(sc.combinationSum2(nums=nums, target=target))
+    import random
+    random.randint(1,5)

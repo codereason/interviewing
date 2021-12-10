@@ -40,33 +40,30 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if sum(nums) < target:return 0
         min_length = float("inf")  #
-        l , r = 0, 0  
-        tmp_sum =0
-        tmp = []
+        l , r = 0, 1 
+        tmp_sum = nums[l]
+        tmp = nums[l:r]
         while r < len(nums):
-            if tmp_sum < target:                
+            if tmp_sum < target:
                 tmp_sum+=nums[r] 
                 tmp.append(nums[r]) 
-                r+=1           
-            else:
-
-                while tmp_sum   >= target :
-                    tmp.pop(0)                   
-                    tmp_sum -= nums[l]
-                    l+=1 
-                    if tmp_sum <= target:
-                        break
+             
                 if len(tmp[:]) < min_length and tmp_sum>= target :
-                    min_length = len(tmp[:])
-            
-        return min_length
+                    min_length = len(tmp[:])        
+            while tmp_sum>= target and l<=r:                
+                min_length = min(len(tmp[:]),min_length)
+                tmp.pop(0)
+                tmp_sum -= nums[l]
+                l+=1
+            r+=1
+        return min_length if min_length != float("inf")  else 0
 
 if __name__ == "__main__":
     so = Solution()
     target = 7
-    nums =[2,3,1,2,4,3,7]
+    nums = [1,1,1,1,1,1,1,2,5]
+
 
 
     print(so.minSubArrayLen(target,nums))
