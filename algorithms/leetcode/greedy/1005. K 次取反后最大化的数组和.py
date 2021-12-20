@@ -44,9 +44,7 @@ class Solution(object):
         for i in range(len(nums)):
             if k<=0:
                 break
-
             if nums[i] < 0:
-
                 nums[i] = -nums[i]
                 k-=1
         if k%2 == 1: 

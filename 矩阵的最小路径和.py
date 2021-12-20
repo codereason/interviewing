@@ -2,7 +2,7 @@ def smallest_sum_path(arr):
     if arr is None:return 0
     if len(arr)==0 :
 
-    dp=    [ [0] * (len(arr[0])+1) for i in range(len(arr)+1)]
+        dp=    [ [0] * (len(arr[0])+1) for i in range(len(arr)+1)]
 
     dp[0][0]=arr[0][0]
 
