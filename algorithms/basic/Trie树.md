@@ -73,8 +73,8 @@ class Trie(object):
                     p.is_word = True
                     return
     
-    def search(self, s):
-        """Judge whether s is in this trie."""
+    def search_word(self, s):
+        """Judge whether word s is in this trie."""
         
         p = self.root
         for c in s:
@@ -85,6 +85,9 @@ class Trie(object):
             return True
         else:
             return False   
+    
+    def search_prefix(self, s):
+        
     
 if __name__ == '__main__':
     trie = Trie()

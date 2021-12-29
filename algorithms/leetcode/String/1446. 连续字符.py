@@ -44,21 +44,17 @@ class Solution(object):
         """
         l, r = 0 , 1  
         max_length = 1
-        # if len(s) == 1: return 1
         while r < len(s):
             tmp = s[l:r]
             char = s[r]
             tmp_len = len(tmp)
             if char != tmp[-1]:
                 l = r 
-
             else:
                 tmp += s[r]
                 tmp_len += 1
             r+=1 
-            
-            if max_length < tmp_len:
-                max_length = tmp_len
+            max_length = max(max_length, tmp_len)
         return max_length
 
 if __name__ == '__main__':

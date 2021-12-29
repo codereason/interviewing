@@ -3,7 +3,7 @@
 ### 存放模板代码的地方。
 
 
-#### 滑动窗口
+#### 滑动窗口//虫取
 
 ```python
 def findSubArray(nums):
@@ -20,5 +20,29 @@ def findSubArray(nums):
         res = max(res, right - left + 1) # 需要更新结果
         right += 1 # 移动右指针，去探索新的区间
     return res
+
+```
+
+
+#### 回溯模板
+
+```python
+def backtrack(path, state, opts):
+    if base:  # 基线条件
+        res.append(path)
+        return
+    for opt in opts:
+        if prune:  # 剪枝条件
+            continue/break
+        # 保存现场（做出选择）
+        path.append(opt)
+        state = change(state)
+        opts.remove(opt)
+        # 递归
+        backtrack(path, state, opts)
+        # 恢复现场（撤销选择）
+        path.remove(opt)
+        state = unchange(state)
+        opts.append(opt)
 
 ```

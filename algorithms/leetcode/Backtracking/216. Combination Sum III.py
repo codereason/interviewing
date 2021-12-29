@@ -38,21 +38,17 @@ class Solution:
         if n < 0:
             return []
         nums = list(range(1, n))
-
         def dfs(nums, target, temp, index):
             if target == 0 and len(temp[:]) == k:
                 self.res.append(temp[:])
                 return
-
             if target < 0:
                 return
-
             for i in range(index, len(nums)):
                 if nums[i] < 10:
                     temp.append(nums[i])
                     dfs(nums, target - nums[i], temp, i + 1)
                     temp.pop()
-
         dfs(nums, n, [], 0)
         return self.res
 

@@ -32,17 +32,12 @@ class Solution:
         :type sum: int
         :rtype: bool
         """
-
         # def dfs(self,root,sum):
-
         if root is None:
             return False
-
         if root.val == sum and root.left is None and root.right is None:
             return True
-
         sum -= root.val
-
         if root.left or root.right:
             return self.hasPathSum(root.left, sum) or self.hasPathSum(
                 root.right, sum)

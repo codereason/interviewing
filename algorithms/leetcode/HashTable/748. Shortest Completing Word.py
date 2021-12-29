@@ -80,8 +80,6 @@ class Solution(object):
             if len(word) < min_length and flag:
                 min_length = len(word)
                 idx =  i
-
-
         return words[idx]
 
 if __name__ == '__main__':

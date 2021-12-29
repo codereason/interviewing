@@ -72,24 +72,18 @@ class Solution2:
             return []
         self.res = []
         nums.sort()
-
         def dfs(nums, temp, target, index):
-
             if target == 0:
-
                 self.res.append(temp[:])
                 return
-
             elif target < 0:
                 return
-
             for i in range(index, len(nums)):
                 if i > index and nums[i] == nums[i-1]:
                     continue
                 temp.append(nums[i])
                 dfs(nums, temp , target - nums[i], i + 1)
                 temp.pop()
-
         dfs(nums, [], target, 0)
 
         return self.res
