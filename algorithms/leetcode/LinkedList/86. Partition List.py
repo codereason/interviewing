@@ -73,7 +73,6 @@ class Solution:
 # return res
 
 
-print("*"*100)
 
 class Solution2(object):
     def partition(self, head, x):

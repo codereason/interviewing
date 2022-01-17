@@ -115,6 +115,5 @@ class Solution:
 if __name__ == "__main__":
   solu = Solution()
   words=["aaaa","bb"]
-
   maxWidth = 20
   print(solu.fullJustify(words,maxWidth))

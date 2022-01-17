@@ -39,7 +39,7 @@ next、hasNext 和 peek 最多调用  1000 次
 
 进阶：你将如何拓展你的设计？使之变得通用化，从而适应所有的类型，而不只是整数型？
 
-通过次数25,602提交次数33,218
+通过次数26,093提交次数33,891
 '''
 
 
@@ -64,34 +64,66 @@ next、hasNext 和 peek 最多调用  1000 次
 #         :rtype: int
 #         """
 
-class PeekingIterator(object):
+# Below is the interface for Iterator, which is already defined for you.
+#
+# class Iterator:
+#     def __init__(self, nums):
+#         """
+#         Initializes an iterator object to the beginning of a list.
+#         :type nums: List[int]
+#         """
+#
+#     def hasNext(self):
+#         """
+#         Returns true if the iteration has more elements.
+#         :rtype: bool
+#         """
+#
+#     def next(self):
+#         """
+#         Returns the next element in the iteration.
+#         :rtype: int
+#         """
+
+class PeekingIterator:
     def __init__(self, iterator):
         """
         Initialize your data structure here.
         :type iterator: Iterator
         """
-        self.iterator = iterator 
-        self.stack = []
-        if self.iterator.hasNext():
-            self.stack.append
-
+        self.iterator = iterator
+        self.cache = self.iterator.next()
 
     def peek(self):
         """
         Returns the next element in the iteration without advancing the iterator.
         :rtype: int
+        
         """
-        return self.stack[-1]
+        return self.cache
+        
 
     def next(self):
         """
         :rtype: int
         """
-        if self.iterator.hasNext():
-            self.stack.append(self.iterator.next())
-            return self.iterator.next()
-        return False
+        tmp = self.cache
+        self.cache = self.iterator.next()
+        # print(self.cache)
+        return tmp
 
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        return True if self.cache!=-100000 else False
+        
+
+# Your PeekingIterator object will be instantiated and called as such:
+# iter = PeekingIterator(Iterator(nums))
+# while iter.hasNext():
+#     val = iter.peek()   # Get the next element but not advance the iterator.
+#     iter.next()         # Should return the same value as [val].
         
         
 

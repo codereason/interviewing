@@ -39,16 +39,29 @@ search 中的 word 由 '.' 或小写英文字母组成
 ################################
 ## 这道题用前缀树比较好做
 ################################
+class TrieNode():
+    def __init__(self):
+        self.data = 26*[None]
+        self.is_end = False 
+
+
+
 class WordDictionary(object):
 
     def __init__(self):
-        pass
+        self.node = TrieNode()
 
     def addWord(self, word):
         """
         :type word: str
         :rtype: None
         """
+        cur = self.node
+        for i in range(len(word)):
+            if cur.data[ord(word[i] )- ord('a')] == None:
+                cur.data[ord(word[i] ) - ord('a')] = TrieNode()
+            cur = cur.data[ord(word[i] ) - ord('a')]
+        cur.is_end = True
 
 
     def search(self, word):
@@ -56,10 +69,42 @@ class WordDictionary(object):
         :type word: str
         :rtype: bool
         """
-
+        cur = self.node
+        for i in range(len(word)):
+            if word[i] == '.':   
+                for  j in range(26):
+                    if cur.data[j] != None:     
+                        if self.search_only(cur.data[j], word[i+1:]  ):
+                            return True
+                return False
+            else:
+                if cur.data[ord(word[i] ) - ord('a')] == None:
+                    return False
+                else:
+                    cur = cur.data[ord(word[i] )- ord('a')]
+        return cur.is_end
+                 
+    #抽象出的 根据当前的节点和字符串头部 进行匹配搜索
+    def search_only(self, cur, word):
+        for i in range(len(word)):
+            if word[i] == '.':   
+                for  j in range(26):
+                    if cur.data[j] != None:     
+                        if self.search_only(cur.data[j], word[i+1:]   ):
+                            return True
+                return False
+            else:
+                if cur.data[ord(word[i] )- ord('a')] == None:
+                    return False
+                else:
+                    cur = cur.data[ord(word[i] ) - ord('a')]
+        return cur.is_end     
 
 
 # Your WordDictionary object will be instantiated and called as such:
-# obj = WordDictionary()
-# obj.addWord(word)
-# param_2 = obj.search(word)
+if __name__ == '__main__':
+    word = "bad"
+    obj = WordDictionary()
+    obj.addWord(word)
+    param_2 = obj.search("...")
+    print(param_2)

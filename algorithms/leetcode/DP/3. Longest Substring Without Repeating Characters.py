@@ -90,11 +90,7 @@ a b c b b c b b
 一定注意：[left, right]区间和set是对应的，要同时维护。
 
 下面的python代码是根据right指向的字符是否出现在set中而反复的进行循环，代码如下：
----------------------
-作者：负雪明烛
-来源：CSDN
-原文：https://blog.csdn.net/fuxuemingzhu/article/details/82022530
-版权声明：本文为博主原创文章，转载请附上博文链接！
+
         :param s:
         :return:
         '''
@@ -112,7 +108,31 @@ a b c b b c b b
                 right+=1
                 res = max(res,len(_))
         return res
+class Solution2(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        l, r = 0, 1 
+        max_length = 0
+        if len(s) == 1:return 1
+        while r < len(s):
+            tmp  = s[l:r]
+            char = s[r] 
 
+            if char in tmp :
+                while char in tmp  :
+                    l+=1
+                    tmp = s[l:r]
+                if tmp == "":
+                    tmp = s[r]
+            else: 
+                tmp+= char
+            r+=1
+            if len(tmp) > max_length:
+                max_length = len(tmp)
+        return max_length
 if __name__ == '__main__':
     s="pwwkew"
     print(Solution().lengthOfLongestSubstring(s))

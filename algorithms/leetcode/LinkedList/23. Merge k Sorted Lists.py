@@ -51,10 +51,10 @@ class Solution:
 #真正有用的方法：分治+merge 两个list
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 class Solution2:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:

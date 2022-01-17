@@ -15,7 +15,6 @@ Output: [1, 3, 9]
 
 
 class Solution(object):
-
     def largestValues(self, root):
         """
         :type root: TreeNode
@@ -26,23 +25,16 @@ class Solution(object):
         import collections
         Queue = collections.deque()
         Queue.append(root)
-        max_value.append(root.val)
         while len(Queue) != 0:
-
             length = len(Queue)
-
+            tmp = float('-inf')
             for i in range(length):
                 r = Queue.popleft()
-
+                if r.val > tmp:
+                    tmp = r.val
                 if r.left:
                     Queue.append(r.left)
                 if r.right:
                     Queue.append(r.right)
-            tmp = []
-            for i in Queue:
-                tmp.append(i.val)
-            print(tmp)
-            if len(tmp) > 0:
-                max_value.append(max(tmp))
-
+            max_value.append(tmp)
         return max_value
